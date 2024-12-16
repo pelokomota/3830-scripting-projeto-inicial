@@ -28,7 +28,7 @@ jobs:
         docker-compose --version
     
     - name: Roda Docker compose
-      run: docker-compose up -d
+      run: docker compose up -d
 
     - name: Executa testes unitarios
       run: mvn -B verify
