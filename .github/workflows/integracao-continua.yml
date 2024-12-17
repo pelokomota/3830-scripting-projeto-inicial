@@ -34,8 +34,11 @@ jobs:
     - name: Executa testes unitarios
       run: mvn -B verify
 
+    - name: Gera relatório Jacoco
+      run: mvn jacoco:prepare-agent verify
+
     - name: static analyze
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=pelokomota_3830-scripting-projeto-inicial
+      run: mvn sonar:sonar -Dsonar.projectKey=pelokomota_3830-scripting-projeto-inicial
