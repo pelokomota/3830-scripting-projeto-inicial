@@ -1,6 +1,6 @@
 #! /bin/bash
 
-docker load -i system-api.tar
+docker load -i 3830-scripting-projeto-inicial.tar
 
 mv docker-compose-prod.yaml docker-compose.yaml
 
