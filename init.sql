@@ -1,1 +1,1 @@
-CREATE DATABASE IF NOT EXISTS 3830-scripting-projeto-inicial_api;
+CREATE DATABASE IF NOT EXISTS vollmed_api;
