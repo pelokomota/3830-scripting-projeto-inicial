@@ -4,7 +4,7 @@ services:
     image: mysql:8.0.36
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=3830-scripting-projeto-inicial_api
+      - MYSQL_DATABASE=vollmed_api
     volumes:
       - ./mysql-data:/var/lib/mysql
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -16,7 +16,7 @@ services:
   
   api:
     build: .
-    container_name: 3830-scripting-projeto-inicial_api
+    container_name: vollmed_api
     restart: unless-stopped
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/3830-scripting-projeto-inicial_api?createDatabaseIfNotExist=true
@@ -25,7 +25,7 @@ services:
     ports:
       - "8000:8080"
     networks:
-      - 3830-scripting-projeto-inicial_api
+      - vollmed
 
 networks:
   vollmed:
