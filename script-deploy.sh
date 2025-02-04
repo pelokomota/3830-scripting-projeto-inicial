@@ -1,6 +1,6 @@
 #! /bin/bash
 
-docker load -i vollmed_api.tar
+docker load -i 3830-scripting-projeto-inicial.tar
 
 mv docker-compose-prod.yaml docker-compose.yaml
 
