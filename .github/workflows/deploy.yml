@@ -38,9 +38,9 @@ jobs:
          echo "$PRIVATE_KEY" > key-deploy-system.pem
          chmod 600 key-deploy-system.pem
 
-         docker save -o vollmed-api.tar vollmed-api_api
+         docker save -o 3830-scripting-projeto-inicial.tar 3830-scripting-projeto-inicial
 
-         scp -o StrictHostKeyChecking=no -i key-deploy-system.pem vollmed-api.tar $USER@$HOST:/home/ubuntu/
+         scp -o StrictHostKeyChecking=no -i key-deploy-system.pem 3830-scripting-projeto-inicial.tar $USER@$HOST:/home/ubuntu/
          scp -o StrictHostKeyChecking=no -i key-deploy-system.pem init.sql $USER@$HOST:/home/ubuntu/
          scp -o StrictHostKeyChecking=no -i key-deploy-system.pem docker-compose-prod.yaml $USER@$HOST:/home/ubuntu/
          scp -o StrictHostKeyChecking=no -i key-deploy-system.pem script-deploy.sh $USER@$HOST:/home/ubuntu/
